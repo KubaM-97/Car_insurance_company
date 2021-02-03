@@ -1,0 +1,700 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lobster&display=swap");
+header .header_buttons .header_button button {
+  padding: 5px 15px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.25s linear;
+}
+
+header {
+  width: 100%;
+  background-color: #f5f6fa;
+  border-bottom: 5px solid red;
+}
+header .header_container {
+  max-width: 2000px;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header_logo {
+  display: inline-block;
+  width: 100px;
+}
+header .header_logo img {
+  vertical-align: middle;
+  width: 100%;
+  margin: 17px;
+  border-radius: 50%;
+  border-top: 5px solid #1155f2;
+  border-right: 5px solid #1155f2;
+  border-bottom: 5px solid #ff8400;
+  border-left: 5px solid #ff8400;
+}
+header .header_buttons .header_button {
+  display: inline-block;
+}
+header .header_buttons .header_button button {
+  border: 2px solid #1155f2;
+  background-color: #e1e4f0;
+  color: #ff8400;
+  padding: 8px;
+}
+header .header_buttons .header_button button:hover {
+  border: 2px solid #ff8400;
+  background-color: #1155f2;
+  color: #e1e4f0;
+  padding: 8px;
+}
+
+@media all and (max-width: 800px) {
+  header .header_container {
+    width: 95%;
+    justify-content: space-between;
+    padding: 11px 0;
+  }
+  header .header_container .header_logo {
+    width: 110px;
+  }
+  header .header_container .header_buttons .header_button {
+    display: block;
+  }
+}
+/* start - borders around labels */
+.singleAnswer input:checked ~ div.border-left {
+  animation: checkedFormOption-left 0.3s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  width: 0px;
+  height: 0px;
+  background-color: #874a01;
+}
+
+@keyframes checkedFormOption-left {
+  to {
+    width: 3px;
+    height: 100%;
+  }
+}
+.singleAnswer input:checked ~ div.border-bottom {
+  animation: checkedFormOption-bottom 0.3s;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+  width: 0px;
+  height: 0px;
+  background-color: #874a01;
+}
+
+@keyframes checkedFormOption-bottom {
+  to {
+    width: 100%;
+    height: 3px;
+  }
+}
+.singleAnswer input:checked ~ div.border-right {
+  animation: checkedFormOption-right 0.3s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  width: 0px;
+  height: 0px;
+  background-color: #874a01;
+}
+
+@keyframes checkedFormOption-right {
+  to {
+    width: 3px;
+    height: 100%;
+  }
+}
+.singleAnswer input:checked ~ div.border-top {
+  animation: checkedFormOption-top 0.3s;
+  animation-delay: 0.8s;
+  animation-fill-mode: forwards;
+  width: 0px;
+  height: 0px;
+  background-color: #874a01;
+}
+
+@keyframes checkedFormOption-top {
+  to {
+    width: 100%;
+    height: 3px;
+  }
+}
+.singleAnswer div.border-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.singleAnswer div.border-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.singleAnswer div.border-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.singleAnswer div.border-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@keyframes colorLabel {
+  to {
+    background-color: #ff8400;
+  }
+}
+/* end - borders around labels */
+.insurance_form {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  user-select: none;
+  margin-top: 30px;
+  padding: 30px 0;
+}
+.insurance_form .form-group {
+  background-image: linear-gradient(50deg, #1155f2, #f5f6fa 60%, #1155f2);
+  box-shadow: 2px 2px 22px black;
+  margin: 20px;
+  color: black;
+  padding: 20px;
+}
+.insurance_form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 5px;
+  color: black;
+  font-weight: 700;
+  text-align-last: center;
+  margin: auto;
+}
+.insurance_form .singleAnswer {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin: 0 4px;
+}
+.insurance_form div[class$=FullDate] {
+  margin-top: 15px;
+  text-align: center;
+}
+.insurance_form input::-webkit-outer-spin-button,
+.insurance_form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.insurance_form .singleAnswer input[type=number] {
+  display: inline-block;
+  width: 28%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+}
+.insurance_form .singleAnswer input[type=number]:last-child {
+  width: 40%;
+}
+.insurance_form .singleAnswer .singleAnswerInputNumbers {
+  width: 150px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.insurance_form .singleAnswer label {
+  display: block;
+  width: 100%;
+  padding: 9px;
+  font-weight: 700;
+}
+.insurance_form p[class$=Answer] {
+  color: red;
+  font-size: 11px;
+  margin: auto;
+}
+.insurance_form input,
+.insurance_form select {
+  border: 2px solid #1155f2;
+  padding: 5px 10px;
+}
+.insurance_form .insurance_form_buttons {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap-reverse;
+}
+.insurance_form .submit {
+  background-color: #04bd39;
+  color: #e1e4f0;
+  font-weight: 700;
+  border-radius: 10px;
+  width: 300px;
+  padding: 10px;
+}
+.insurance_form input[type=submit] {
+  cursor: pointer;
+}
+.insurance_form .insurance_form_title {
+  text-align: center;
+  font-weight: 700;
+}
+.insurance_form .form-group .form-group-header {
+  margin-bottom: 30px;
+}
+.insurance_form .form-group:first-of-type .form-group-header {
+  margin-bottom: 0px;
+}
+.insurance_form .form-group-anotherStep {
+  margin: auto;
+  padding: 10px;
+}
+.insurance_form .form-group-answers {
+  margin: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.insurance_form .singleAnswer input[type=checkbox],
+.insurance_form .singleAnswer input[type=radio] {
+  display: none;
+}
+.insurance_form .singleAnswer input:checked + label {
+  animation: colorLabel 0.77s 1s;
+  animation-fill-mode: forwards;
+}
+.insurance_form .back {
+  background-color: #a31d06;
+  color: #e1e4f0;
+  font-weight: 700;
+  border-radius: 10px;
+  width: 200px;
+  padding: 10px;
+}
+
+@keyframes showInsuranceFormMini {
+  to {
+    opacity: 1;
+  }
+}
+.insurance_form_mini {
+  width: 350px;
+  margin: auto;
+  top: 0;
+  z-index: 2;
+  opacity: 0;
+  animation: showInsuranceFormMini 1s 1s;
+  animation-fill-mode: forwards;
+}
+.insurance_form_mini .form-group {
+  background-image: linear-gradient(50deg, #1155f2, #f5f6fa 60%, #1155f2);
+  box-shadow: 2px 2px 22px black;
+  margin: 20px;
+  color: black;
+  padding: 20px;
+}
+.insurance_form_mini select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 5px;
+  color: black;
+  font-weight: 700;
+  text-align-last: center;
+  margin: auto;
+}
+.insurance_form_mini .singleAnswer {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin: 0 4px;
+}
+.insurance_form_mini div[class$=FullDate] {
+  margin-top: 15px;
+  text-align: center;
+}
+.insurance_form_mini input::-webkit-outer-spin-button,
+.insurance_form_mini input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.insurance_form_mini .singleAnswer input[type=number] {
+  display: inline-block;
+  width: 28%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  text-align: center;
+}
+.insurance_form_mini .singleAnswer input[type=number]:last-child {
+  width: 40%;
+}
+.insurance_form_mini .singleAnswer .singleAnswerInputNumbers {
+  width: 150px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.insurance_form_mini .singleAnswer label {
+  display: block;
+  width: 100%;
+  padding: 9px;
+  font-weight: 700;
+}
+.insurance_form_mini p[class$=Answer] {
+  color: red;
+  font-size: 11px;
+  margin: auto;
+}
+.insurance_form_mini input,
+.insurance_form_mini select {
+  border: 2px solid #1155f2;
+  padding: 5px 10px;
+}
+.insurance_form_mini .insurance_form_buttons {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap-reverse;
+}
+.insurance_form_mini .submit {
+  background-color: #04bd39;
+  color: #e1e4f0;
+  font-weight: 700;
+  border-radius: 10px;
+  width: 300px;
+  padding: 10px;
+}
+.insurance_form_mini input[type=submit] {
+  cursor: pointer;
+}
+.insurance_form_mini input {
+  font-size: 12px;
+}
+.insurance_form_mini select {
+  padding: 2px;
+  font-size: 12px;
+}
+.insurance_form_mini .form-group-anotherStep {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  padding: 10px;
+}
+.insurance_form_mini .form-group-answers {
+  margin: 0 10px;
+}
+.insurance_form_mini .submit {
+  width: 100%;
+}
+
+@media all and (max-width: 800px) {
+  .insurance_form_buttons input {
+    margin: 10px auto;
+  }
+}
+@keyframes showDescription {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes showBorder {
+  10% {
+    border-width: 2px;
+    transform: rotate(13deg);
+  }
+  20% {
+    border-width: 4px;
+    transform: rotate(71deg);
+  }
+  30% {
+    border-width: 6px;
+    transform: rotate(129deg);
+  }
+  40% {
+    border-width: 8px;
+    transform: rotate(187deg);
+  }
+  50% {
+    border-width: 10px;
+    transform: rotate(245deg);
+  }
+  60% {
+    border-width: 12px;
+    transform: rotate(303deg);
+  }
+  70% {
+    border-width: 14px;
+    transform: rotate(361deg);
+  }
+  80% {
+    border-width: 16px;
+    transform: rotate(419deg);
+  }
+  90% {
+    border-width: 18px;
+    transform: rotate(477deg);
+  }
+  100% {
+    border-width: 20px;
+    transform: rotate(535deg);
+  }
+}
+@keyframes logoCompany {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes showImageCar {
+  from {
+    opacity: 0;
+    top: 50%;
+    right: 65%;
+  }
+  to {
+    opacity: 1;
+    top: 50%;
+    right: 55%;
+  }
+}
+@keyframes showImageModel {
+  from {
+    opacity: 0;
+    top: 20%;
+    right: -45%;
+  }
+  to {
+    opacity: 1;
+    top: 30%;
+    right: -45%;
+  }
+}
+.logo_container {
+  position: relative;
+  height: 600px;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}
+.logo_container .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+}
+.logo_container .logo .logo_description {
+  font-size: 12px;
+  margin: 5px;
+  position: relative;
+}
+.logo_container .logo .logo_description .layout {
+  overflow: hidden;
+  width: 0%;
+  height: 100%;
+  background-color: transparent;
+  animation: showDescription 0.4s 1 5s;
+  animation-fill-mode: forwards;
+  position: relative;
+}
+.logo_container .logo .logo_description h1 {
+  width: 100%;
+}
+.logo_container .logo .logo_circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+.logo_container .logo .logo_circle .logo_circle_border {
+  width: 250px;
+  height: 250px;
+  border-style: solid;
+  border-color: #ff8400 #ff8400 #1155f2 #1155f2;
+  border-radius: 50%;
+  animation: showBorder 2s;
+  animation-fill-mode: forwards;
+}
+.logo_container .logo .logo_circle img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  border-radius: 50%;
+  animation: logoCompany 1s 1 0.65s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  z-index: -1;
+}
+.logo_container .logo .logo_car {
+  opacity: 0;
+  width: 85%;
+  position: absolute;
+  animation: showImageCar 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 2.5s;
+}
+.logo_container .logo .logo_car img {
+  width: 100%;
+}
+.logo_container .logo .logo_lady {
+  opacity: 0;
+  width: 60%;
+  position: absolute;
+  animation: showImageModel 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 3.5s;
+}
+.logo_container .logo .logo_lady img {
+  width: 100%;
+}
+
+@media all and (max-width: 1000px) {
+  .logo_container .logo {
+    width: 200px;
+  }
+  .logo_container .logo .logo_circle .logo_circle_border {
+    width: 200px;
+    height: 200px;
+  }
+}
+.columns {
+  max-width: 2000px;
+  margin: 100px auto 0;
+  background-color: #1155f2;
+  padding: 20px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+}
+.columns .column {
+  background-color: #0327a8;
+  padding: 10px 20px;
+  width: 30%;
+  margin: 10px;
+}
+.columns .column .column_content {
+  text-align: justify;
+}
+
+@media all and (max-width: 800px) {
+  .columns .column {
+    width: 100%;
+  }
+}
+article {
+  border-top: 5px solid #f54905;
+  border-bottom: 5px solid #f54905;
+  background-color: #0327a8;
+  color: #e1e4f0;
+  padding: 60px 30px 15px;
+  margin: 300px auto;
+  text-align: center;
+  font: 700 17px "Libre Baskerville";
+}
+article h1 {
+  color: #ff8400;
+}
+article section {
+  padding: 20px;
+  width: 60%;
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: justify;
+}
+article section span.blockquote_author {
+  display: block;
+  text-align: right;
+  margin: 10px 25px;
+  color: #ff8400;
+}
+
+@media all and (max-width: 1000px) {
+  article section {
+    width: 100%;
+  }
+}
+footer {
+  margin-top: 300px;
+  background-color: #f5f6fa;
+  color: #0327a8;
+  padding: 50px;
+  text-align: center;
+}
+footer div.footer_info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+footer ol {
+  text-align: left;
+  font: 29px "Libre Baskerville";
+  list-style-type: none;
+}
+footer ol li {
+  font-size: 22px;
+  margin-top: 20px;
+}
+footer ol li a {
+  color: #0327a8;
+  text-decoration: none;
+}
+footer ol li a:hover {
+  cursor: pointer;
+  color: #ff8400;
+}
+footer .all_rights_reserved {
+  font-size: 32px;
+  margin-top: 100px;
+}
+
+@media all and (max-width: 800px) {
+  footer {
+    margin-top: 100px;
+    padding: 0;
+  }
+  footer ol {
+    margin-top: 70px;
+    font-size: 18px;
+    text-align: center;
+  }
+  footer ol li {
+    font-size: 15px;
+  }
+  footer .all_rights_reserved {
+    font-size: 17px;
+    padding-bottom: 30px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background: linear-gradient(320deg, #f5f6fa 20%, #0327a8);
+  color: #f5f6fa;
+}
+
+main {
+  position: relative;
+}
+
+/*# sourceMappingURL=styles.css.map */

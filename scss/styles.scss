@@ -1,0 +1,29 @@
+$colorBlue: #1155f2;
+$colorOrange: #ff8400;
+$colorWhite: #f5f6fa;
+$fontColor: #e1e4f0;
+$colorDarkBlue: #0327a8;
+$mainBackground: linear-gradient(320deg, $colorWhite 20%, $colorDarkBlue);
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Lobster&display=swap');
+@import "header.scss";
+@import "form_insurance.scss";
+@import "logo.scss";
+@import "columns.scss";
+@import "opinions.scss";
+@import "footer.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background: $mainBackground;
+    color: $colorWhite;
+}
+
+main {
+    position: relative;
+}

@@ -1,0 +1,29 @@
+.columns {
+    max-width: 2000px;
+    margin: 100px auto 0;
+    background-color: $colorBlue;
+    padding: 20px 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+
+    .column {
+        background-color: $colorDarkBlue;
+        padding: 10px 20px;
+        width: 30%;
+        margin: 10px;
+
+        .column_content {
+            text-align: justify;
+        }
+    }
+}
+
+@media all and (max-width: 800px) {
+    .columns {
+        .column {
+            width: 100%;
+        }
+    }
+}

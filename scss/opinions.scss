@@ -1,0 +1,40 @@
+$colorBorderOpinions: #f54905;
+
+article {
+    border-top: 5px solid $colorBorderOpinions;
+    border-bottom: 5px solid $colorBorderOpinions;
+    background-color: $colorDarkBlue;
+    color: $fontColor;
+    padding: 60px 30px 15px;
+    margin: 300px auto;
+    text-align: center;
+
+    h1 {
+        color: $colorOrange;
+    }
+
+    font: 700 17px 'Libre Baskerville';
+
+    section {
+        padding: 20px;
+        width: 60%;
+        max-width: 1000px;
+        margin: 40px auto;
+        text-align: justify;
+
+        span.blockquote_author {
+            display: block;
+            text-align: right;
+            margin: 10px 25px;
+            color: $colorOrange;
+        }
+    }
+}
+
+@media all and (max-width: 1000px) {
+    article {
+        section {
+            width: 100%;
+        }
+    }
+}

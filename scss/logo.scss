@@ -1,0 +1,160 @@
+$mainWidth: 250px;
+$borderWidths: 1,2,3,4,5,6,7,8,9,10;
+
+@mixin logoImage($width, $animationName, $animationDelay) {
+    opacity: 0;
+    width: $width;
+    position: absolute;
+    animation: $animationName 2s;
+    animation-fill-mode: forwards;
+    animation-delay: $animationDelay;
+
+    img {
+        width: 100%;
+    }
+}
+
+@mixin showImage($fromTop, $fromRight, $toTop, $toRight) {
+    from {
+        opacity: 0;
+        top: $fromTop;
+        right: $fromRight;
+    }
+
+    to {
+        opacity: 1;
+        top: $toTop;
+        right: $toRight;
+    }
+}
+
+
+@keyframes showDescription {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes showBorder {
+    @each $borderWidth in $borderWidths {
+        #{$borderWidth*10}% {
+            border-width: #{$borderWidth*2}px;
+            transform: rotate(#{-45 + $borderWidth*58}deg);
+        }
+    }
+}
+
+@keyframes logoCompany {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes showImageCar {
+    @include showImage(50%, 65%, 50%, 55%)
+}
+
+@keyframes showImageModel {
+    @include showImage(20%, -45%, 30%, -45%)
+}
+
+.logo_container {
+    position: relative;
+    height: 600px;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+
+    .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: $mainWidth;
+
+        .logo_description {
+            font-size: 12px;
+            margin: 5px;
+            position: relative;
+
+            .layout {
+                overflow: hidden;
+                width: 0%;
+                height: 100%;
+                background-color: transparent;
+                animation: showDescription .4s 1 5s;
+                animation-fill-mode: forwards;
+                position: relative;
+            }
+
+            h1 {
+                width: 100%;
+            }
+        }
+
+        .logo_circle {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+
+            .logo_circle_border {
+                width: $mainWidth;
+                height: $mainWidth;
+                border-style: solid;
+                border-color: $colorOrange $colorOrange $colorBlue $colorBlue;
+                border-radius: 50%;
+                animation: showBorder 2s;
+                animation-fill-mode: forwards;
+            }
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                border-radius: 50%;
+                animation: logoCompany 1s 1 .65s;
+                animation-fill-mode: forwards;
+                opacity: 0;
+                z-index: -1;
+            }
+
+        }
+
+        .logo_car {
+            @include logoImage(85%, showImageCar, 2.5s);
+        }
+
+        .logo_lady {
+            @include logoImage(60%, showImageModel, 3.5s);
+        }
+    }
+}
+
+@media all and (max-width: 1000px) {
+    $mainWidth: 200px;
+
+    .logo_container {
+        .logo {
+            width: $mainWidth;
+
+            .logo_circle {
+                .logo_circle_border {
+                    width: $mainWidth;
+                    height: $mainWidth;
+                }
+            }
+
+        }
+    }
+}

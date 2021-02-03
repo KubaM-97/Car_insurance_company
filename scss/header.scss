@@ -1,0 +1,85 @@
+%headerButton {
+    padding: 5px 15px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all .25s linear;
+}
+
+@mixin colorHeaderButton($borderColor, $backgroundColor, $fontColor) {
+    border: 2px solid $borderColor;
+    background-color: $backgroundColor;
+    color: $fontColor;
+    padding: 8px;
+}
+
+header {
+    width: 100%;
+    background-color: $colorWhite;
+    border-bottom: 5px solid red;
+
+    .header_container {
+        max-width: 2000px;
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header_logo {
+        display: inline-block;
+        width: 100px;
+
+        img {
+            vertical-align: middle;
+            width: 100%;
+            margin: 17px;
+            border-radius: 50%;
+            border-top: 5px solid $colorBlue;
+            border-right: 5px solid $colorBlue;
+            border-bottom: 5px solid $colorOrange;
+            border-left: 5px solid $colorOrange;
+        }
+    }
+
+    .header_buttons {
+        .header_button {
+            display: inline-block;
+
+            button {
+                @extend %headerButton;
+            }
+
+            button {
+                @include colorHeaderButton($colorBlue, $fontColor, $colorOrange)
+            }
+
+            button:hover {
+                @include colorHeaderButton($colorOrange, $colorBlue, $fontColor)
+            }
+        }
+    }
+}
+
+@media all and (max-width: 800px) {
+    header {
+        .header_container {
+            width: 95%;
+            justify-content: space-between;
+            padding: 11px 0;
+
+            .header_logo {
+                width: 110px;
+            }
+
+            .header_buttons {
+                .header_button {
+                    display: block;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header_container">
+            <div class="header_logo">
+                <a href="#"><img src="images/logo_logo.jpg" alt="logo Company Assistance"></a>
+            </div>
+            <div class="header_buttons">
+                <div class="header_button">
+                    <button class="reportDamage">ZGŁOŚ SZKODĘ</button>
+                </div>
+                <div class="header_button">
+                    <button class="register">ZAŁÓŻ KONTO</button>
+                </div>
+                <div class="header_button">
+                    <button class="signIn">ZALOGUJ SIĘ</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+        <div class="logo_container">
+            <div class="logo">
+                <div class="logo_description">
+
+                    <div class="layout">
+                        <h1>ZAPEWNIJ SOBIE SPOKÓJ JUŻ DZIŚ!</h1>
+                    </div>
+
+                </div>
+                <div class="logo_circle">
+                    <div class="logo_circle_border"></div>
+                    <img src="images/logo_logo.jpg" alt="Logo company">
+                </div>
+                <div class="logo_car">
+                    <img src="images/logo_car.jpg" alt="Logo car">
+                </div>
+                <div class="logo_lady">
+                    <img src="images/logo_lady.png" alt="Logo model">
+                </div>
+
+                <div class="logo_description">
+                    <div class="layout">
+                        <h1>UBEZPIECZ SWÓJ SAMOCHÓD!</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="insurance_form_mini">
+
+            <form action="order.php" method="post">
+
+
+                <div class="form-group">
+
+
+                    <div class="form-group-anotherStep">
+
+                        <div class="form-group-question-title">
+                            <h4>Typ pojazdu</h4>
+                        </div>
+
+                        <div class="form-group-answers">
+
+                            <div class="singleAnswer">
+
+                                <select name="vehicleType" id="vehicleType">
+                                    <option value="car">Samochód osobowy</option>
+                                    <option value="motor">Motocykl</option>
+                                    <option value="truck">Samochód ciężarowy</option>
+                                    <option value="bus">Autobus</option>
+                                    <option value="tractor">Ciągnik / Traktor</option>
+                                    <option value="quad">Quad</option>
+                                </select>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group-anotherStep">
+
+                        <div class="form-group-question-title">
+                            <h4>Marka</h4>
+                        </div>
+
+                        <div class="form-group-answers">
+
+                            <div class="singleAnswer">
+
+                                <select name="brand" id="brand">
+                                    <option value="audi">Audi</option>
+                                    <option value="bmw">BMW</option>
+                                    <option value="citroen">Citroen</option>
+                                    <option value="ferrari">Ferrari</option>
+                                    <option value="lamborghini">Lamborghini</option>
+                                    <option value="kia">KIA</option>
+                                    <option value="mercedes">Mercedes</option>
+                                    <option value="opel">Opel</option>
+                                    <option value="porsche">Porsche</option>
+                                    <option value="quad">Quad</option>
+                                    <option value="seat">Seat</option>
+                                    <option value="skoda">Škoda</option>
+                                    <option value="volkswagen">Volkswagen</option>
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group-anotherStep">
+
+                        <div class="form-group-question-title">
+                            <h4>Rok produkcji</h4>
+                        </div>
+
+                        <div class="form-group-answers">
+
+                            <div class="singleAnswer">
+
+                                <select name="productionYear" id="productionYear">
+                                    <option value="2021">2021</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2000">2000</option>
+                                    <option value="1999">1999</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1995">1995</option>
+                                    <option value="1994">1994</option>
+                                    <option value="1993">1993</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1991">1991</option>
+                                    <option value="1990">1990</option>
+                                    <option value="1989">1989</option>
+                                    <option value="1988">1988</option>
+                                    <option value="1987">1987</option>
+                                    <option value="1986">1986</option>
+                                    <option value="1985">1985</option>
+                                    <option value="1984">1984</option>
+                                    <option value="1983">1983</option>
+                                    <option value="1982">1982</option>
+                                    <option value="1981">1981</option>
+                                    <option value="1980">1980</option>
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="form-group-anotherStep">
+
+                        <div class="form-group-question-title">
+                            <h4>Data rejestracji</h4>
+                        </div>
+
+                        <div class="form-group-answers">
+
+                            <div class="singleAnswer registrationDate">
+
+                                <div class="singleAnswerInputNumbers">
+                                    <input type="number" id="registrationDay" placeholder="dd" min="1" max="31">
+                                    <input type="number" id="registrationMonth" placeholder="mm" min="1" max="12">
+                                    <input type="number" id="registrationYear" placeholder="rrrr" min="1980" max="2021">
+                                </div>
+
+                                <div class="registrationFullDate">
+                                    <span id="correctRegistrationDay"></span>
+                                    -
+                                    <span id="correctRegistrationMonth"></span>
+                                    -
+                                    <span id="correctRegistrationYear"></span>
+
+                                    <p class="correctDateAnswer"></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group-anotherStep">
+
+                        <div class="form-group-question-title">
+                            <h4>Data urodzenia</h4>
+                        </div>
+
+                        <div class="form-group-answers">
+
+                            <div class="singleAnswer birthDate">
+                                <div class="singleAnswerInputNumbers">
+                                    <input type="number" id="birthDay" placeholder="dd" min="1" max="31">
+                                    <input type="number" id="birthMonth" placeholder="mm" min="1" max="12">
+                                    <input type="number" id="birthYear" placeholder="rrrr" min="1980" max="2021">
+                                </div>
+                                <div class="birthFullDate">
+                                    <span id="correctBirthDay"></span>
+                                    -
+                                    <span id="correctBirthMonth"></span>
+                                    -
+                                    <span id="correctBirthYear"></span>
+
+                                    <p class="correctDateAnswer"></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="form-group">
+                    <div class="insurance_form_buttons">
+                        <input type="submit" value="Wejdź i ubezpiecz swój pojazd już teraz!" class="submit">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="columns">
+            <div class="column">
+                <div class="column_title">
+                    <h1>Lorem ipsum</h1>
+                </div>
+                <div class="column_content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, odit optio doloribus aliquam ab ratione ipsa dicta id voluptates necessitatibus quasi excepturi totam, sapiente tenetur provident neque fugit saepe vel.
+                    Reiciendis modi quia deserunt dicta, mollitia molestiae minus impedit sunt nemo consequuntur suscipit commodi nisi, aspernatur distinctio voluptatum ex quos, recusandae deleniti! Soluta sapiente sequi, dolorem repellendus inventore iusto voluptates.Minus unde dolore perspiciatis ex, tempora praesentium. Hic maxime quasi obcaecati fuga deleniti, quidem excepturi odio odit accusamus cumque, doloremque error, nostrum. Culpa, sint facere corrupti, quidem mollitia aut ad. Aliquid dolore, beatae ipsam ab, excepturi id placeat magni rem velit sit fugit iusto, amet numquam. Non vero autem libero dignissimos sunt, enim similique voluptatem inventore esse, consequatur, magni iste! Tempore numquam est aut. Blanditiis laudantium doloribus quis aliquid quia odit possimus labore libero aspernatur et odio necessitatibus, architecto nobis inventore consequatur dolorem nam similique id accusamus quos eveniet assumenda. Consequatur expedita porro ab quas recusandae ex alias quidem, voluptate nulla laboriosam soluta, at exercitationem sunt? Nostrum, deleniti, ipsum. Dolore perferendis suscipit a delectus enim alias facere cum optio. Impedit. Totam omnis nostrum consequuntur perferendis laborum odio, nesciunt, magnam possimus eos tempora, sit velit laboriosam doloremque magni rem libero iste dolorum natus quaerat esse iusto repellat fugit deserunt fuga dolores. Sit sunt illo voluptatem aliquid quae fuga soluta eligendi, eaque nisi rerum tempora laboriosam saepe dolores atque facere qui, non deserunt nemo harum. Excepturi architecto pariatur nisi laboriosam ipsam, perspiciatis? Illo dolorum est voluptatum nulla eius libero, tempora autem sequi, reiciendis ipsum culpa veritatis. Fuga reprehenderit soluta magnam sit ratione quod amet, odit, facere deleniti nesciunt quia voluptas cum delectus. Atque maiores dolore, iure accusantium reiciendis tempore explicabo, architecto rerum cumque molestiae, incidunt amet fugiat minima ipsum, quas ab! Deleniti ex, eum esse veniam modi accusantium illo aliquam labore commodi.</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column_title">
+                    <h1>Lorem ipsum</h1>
+                </div>
+                <div class="column_content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, odit optio doloribus aliquam ab ratione ipsa dicta id voluptates necessitatibus quasi excepturi totam, sapiente tenetur provident neque fugit saepe vel.
+                    Reiciendis modi quia deserunt dicta, mollitia molestiae minus impedit sunt nemo consequuntur suscipit commodi nisi, aspernatur distinctio voluptatum ex quos, recusandae deleniti! Soluta sapiente sequi, dolorem repellendus inventore iusto voluptates.Minus unde dolore perspiciatis ex, tempora praesentium. Hic maxime quasi obcaecati fuga deleniti, quidem excepturi odio odit accusamus cumque, doloremque error, nostrum. Culpa, sint facere corrupti, quidem mollitia aut ad. Aliquid dolore, beatae ipsam ab, excepturi id placeat magni rem velit sit fugit iusto, amet numquam. Non vero autem libero dignissimos sunt, enim similique voluptatem inventore esse, consequatur, magni iste! Tempore numquam est aut. Blanditiis laudantium doloribus quis aliquid quia odit possimus labore libero aspernatur et odio necessitatibus, architecto nobis inventore consequatur dolorem nam similique id accusamus quos eveniet assumenda. Consequatur expedita porro ab quas recusandae ex alias quidem, voluptate nulla laboriosam soluta, at exercitationem sunt? Nostrum, deleniti, ipsum. Dolore perferendis suscipit a delectus enim alias facere cum optio. Impedit. Totam omnis nostrum consequuntur perferendis laborum odio, nesciunt, magnam possimus eos tempora, sit velit laboriosam doloremque magni rem libero iste dolorum natus quaerat esse iusto repellat fugit deserunt fuga dolores. Sit sunt illo voluptatem aliquid quae fuga soluta eligendi, eaque nisi rerum tempora laboriosam saepe dolores atque facere qui, non deserunt nemo harum. Excepturi architecto pariatur nisi laboriosam ipsam, perspiciatis? Illo dolorum est voluptatum nulla eius libero, tempora autem sequi, reiciendis ipsum culpa veritatis. Fuga reprehenderit soluta magnam sit ratione quod amet, odit, facere deleniti nesciunt quia voluptas cum delectus. Atque maiores dolore, iure accusantium reiciendis tempore explicabo, architecto rerum cumque molestiae, incidunt amet fugiat minima ipsum, quas ab! Deleniti ex, eum esse veniam modi accusantium illo aliquam labore commodi.</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="column_title">
+                    <h1>Lorem ipsum</h1>
+                </div>
+                <div class="column_content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, odit optio doloribus aliquam ab ratione ipsa dicta id voluptates necessitatibus quasi excepturi totam, sapiente tenetur provident neque fugit saepe vel.
+                    Reiciendis modi quia deserunt dicta, mollitia molestiae minus impedit sunt nemo consequuntur suscipit commodi nisi, aspernatur distinctio voluptatum ex quos, recusandae deleniti! Soluta sapiente sequi, dolorem repellendus inventore iusto voluptates.Minus unde dolore perspiciatis ex, tempora praesentium. Hic maxime quasi obcaecati fuga deleniti, quidem excepturi odio odit accusamus cumque, doloremque error, nostrum. Culpa, sint facere corrupti, quidem mollitia aut ad. Aliquid dolore, beatae ipsam ab, excepturi id placeat magni rem velit sit fugit iusto, amet numquam. Non vero autem libero dignissimos sunt, enim similique voluptatem inventore esse, consequatur, magni iste! Tempore numquam est aut. Blanditiis laudantium doloribus quis aliquid quia odit possimus labore libero aspernatur et odio necessitatibus, architecto nobis inventore consequatur dolorem nam similique id accusamus quos eveniet assumenda. Consequatur expedita porro ab quas recusandae ex alias quidem, voluptate nulla laboriosam soluta, at exercitationem sunt? Nostrum, deleniti, ipsum. Dolore perferendis suscipit a delectus enim alias facere cum optio. Impedit. Totam omnis nostrum consequuntur perferendis laborum odio, nesciunt, magnam possimus eos tempora, sit velit laboriosam doloremque magni rem libero iste dolorum natus quaerat esse iusto repellat fugit deserunt fuga dolores. Sit sunt illo voluptatem aliquid quae fuga soluta eligendi, eaque nisi rerum tempora laboriosam saepe dolores atque facere qui, non deserunt nemo harum. Excepturi architecto pariatur nisi laboriosam ipsam, perspiciatis? Illo dolorum est voluptatum nulla eius libero, tempora autem sequi, reiciendis ipsum culpa veritatis. Fuga reprehenderit soluta magnam sit ratione quod amet, odit, facere deleniti nesciunt quia voluptas cum delectus. Atque maiores dolore, iure accusantium reiciendis tempore explicabo, architecto rerum cumque molestiae, incidunt amet fugiat minima ipsum, quas ab! Deleniti ex, eum esse veniam modi accusantium illo aliquam labore commodi.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <article>
+        <h1>Opinie naszych Klientów</h1>
+        <section>
+            <blockquote>
+                Goniłem przez las 2 uciekające dziki. Polowanie zakończyło się sukcesesm - cała maska w farbie. Company Assistance w ciągu godziny dostarczyło mi nowe auto i mogłem kontynuować zabawę. Polecam. <span class="blockquote_author">- Krzysiek z Olsztyna</span>
+            </blockquote>
+        </section>
+        <section>
+            <blockquote>
+                Ostatniej zimy wpadłam w kilometrowy poślizg. Na końcu drogi była 400 metrowa skarpa, w którą wpadłam, a na dnie której płynęła lodowata rzeka. Auto zarysowane. Pieniądze z ubezpieczenia dostałam po 3 godzinach. Ocena: 10/10 <span class="blockquote_author">- Luiza z Gdyni</span>
+            </blockquote>
+        </section>
+        <section>
+            <blockquote>
+                Jakieś gnoje ukradły mi motor, gdy poszedłem się wysikać. Zdenerwowany zadzwoniłem do Company Assistance. Pani po drugiej stronie telefonu była bardzo miła i pomocna. Chociaż tyle dobrego! <span class="blockquote_author">- Mateo z Krakowa</span>
+            </blockquote>
+        </section>
+    </article>
+    <footer>
+        <div class="footer_info">
+
+            <ol>O nas
+                <li><a href="#">Company Assistance w liczbach</a></li>
+                <li><a href="#">Dokumenty do pobrania</a></li>
+                <li><a href="#">Polityka prywatności</a></li>
+                <li><a href="#">Regulamin</a></li>
+            </ol>
+            <ol>Czy możemy Ci w czymś pomóc?
+                <li><a href="#">Dane kontaktowe</a></li>
+                <li><a href="#">Infolinia</a></li>
+                <li><a href="#">Wirtualny doradca</a></li>
+                <li>TEL: 22 444 77 33</li>
+            </ol>
+        </div>
+        <div class="all_rights_reserved">&copy; 2021 Wszelkie prawa zastrzeżone</div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

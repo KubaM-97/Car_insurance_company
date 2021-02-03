@@ -1,0 +1,284 @@
+$borderColorLabel: #874a01;
+$backgroundColorButtonBack: #a31d06;
+$backgroundColorButtonSubmit: #04bd39;
+
+
+
+
+/* start - borders around labels */
+$sides: "left", "bottom", "right", "top";
+
+@each $side in $sides {
+
+    .singleAnswer input:checked ~ div.border-#{$side} {
+        $anD: index($sides, $side);
+        animation: checkedFormOption-#{$side} .3s;
+        animation-delay: #{$animIndex*.2}s;
+        animation-fill-mode: forwards;
+        width: 0px;
+        height: 0px;
+        background-color: $borderColorLabel;
+    }
+
+    @keyframes checkedFormOption-#{$side} {
+        $anD: index($sides, $side);
+
+        from {}
+
+        to {
+            @if $anD%2==1 {
+                width: 3px;
+                height: 100%;
+            }
+
+            @else {
+                width: 100%;
+                height: 3px;
+            }
+        }
+    }
+}
+
+@mixin position($TopBottom, $LeftRight) {
+    position: absolute;
+    #{$TopBottom}: 0;
+    #{$LeftRight}: 0;
+}
+
+.singleAnswer div.border-left {
+    @include position(top, left);
+}
+
+.singleAnswer div.border-bottom {
+    @include position(bottom, left);
+}
+
+.singleAnswer div.border-right {
+    @include position(bottom, right);
+}
+
+.singleAnswer div.border-top {
+    @include position(top, right);
+}
+
+@keyframes colorLabel {
+    from {}
+
+    to {
+        background-color: $colorOrange;
+    }
+}
+/* end - borders around labels */
+
+
+
+
+
+
+@mixin commonInsuranceForm() {
+
+    .form-group {
+        background-image: linear-gradient(50deg, $colorBlue, $colorWhite 60%, $colorBlue);
+        box-shadow: 2px 2px 22px black;
+        margin: 20px;
+        color: black;
+        padding: 20px;
+    }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border-radius: 5px;
+        color: black;
+        font-weight: 700;
+        text-align-last: center;
+        margin: auto;
+    }
+
+    .singleAnswer {
+        width: 100%;
+        position: relative;
+        text-align: center;
+        margin: 0 4px;
+    }
+
+
+    div[class$="FullDate"] {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    .singleAnswer input[type="number"] {
+        display: inline-block;
+        width: 28%;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        text-align: center;
+    }
+    .singleAnswer input[type="number"]:last-child{
+        width: 40%;
+    }
+
+    .singleAnswer .singleAnswerInputNumbers {
+        width: 150px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .singleAnswer label {
+        display: block;
+        width: 100%;
+        padding: 9px;
+        font-weight: 700;
+    }
+    
+    p[class$="Answer"] {
+        color: red;
+        font-size: 11px;
+        margin: auto;
+    }
+    
+    input,
+    select {
+        border: 2px solid $colorBlue;
+        padding: 5px 10px;
+    }
+
+
+    .insurance_form_buttons {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row wrap-reverse;
+    }
+
+    .submit {
+        @include buttonInsuranceForm(300, $backgroundColorButtonSubmit)
+    }
+    input[type="submit"]{
+        cursor: pointer;
+    }
+}
+
+
+@mixin buttonInsuranceForm($buttonWidth, $buttonColor) {
+    background-color: $buttonColor;
+    color: $fontColor;
+    font-weight: 700;
+    border-radius: 10px;
+    width: #{$buttonWidth}px;
+    padding: 10px;
+}
+
+
+
+.insurance_form {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    user-select: none;
+    margin-top: 30px;
+    padding: 30px 0;
+
+    @include commonInsuranceForm();
+
+    .insurance_form_title {
+        text-align: center;
+        font-weight: 700;
+    }
+ 
+    .form-group .form-group-header {
+        margin-bottom: 30px;
+    }
+
+    .form-group:first-of-type .form-group-header {
+        margin-bottom: 0px;
+    }
+
+    .form-group-anotherStep {
+        margin: auto;
+        padding: 10px;
+    }
+
+    .form-group-answers {
+        margin: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+    .singleAnswer input[type="checkbox"],
+    .singleAnswer input[type="radio"] {
+        display: none;
+    }
+
+    .singleAnswer input:checked + label {
+        animation: colorLabel .77s 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .back {
+        @include buttonInsuranceForm(200, $backgroundColorButtonBack)
+    }
+
+ 
+
+
+}
+
+
+
+@keyframes showInsuranceFormMini{
+    from{}
+    to{opacity: 1}
+}
+
+.insurance_form_mini {
+    width: 350px;
+    margin: auto;
+    top: 0;
+    z-index: 2;
+    opacity: 0;
+    animation: showInsuranceFormMini 1s 1s;
+    animation-fill-mode: forwards;
+
+    @include commonInsuranceForm();
+
+    input {
+        font-size: 12px;
+    }
+
+    select {
+        padding: 2px;
+        font-size: 12px;
+    }
+
+    .form-group-anotherStep {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        padding: 10px;
+    }
+
+    .form-group-answers {
+        margin: 0 10px;
+    }
+    .submit{
+        width: 100%;
+    }
+
+}
+
+@media all and (max-width: 800px){
+    .insurance_form_buttons input{
+        margin: 10px auto;
+    }
+}
